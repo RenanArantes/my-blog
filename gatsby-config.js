@@ -3,6 +3,7 @@ module.exports = {
     title: `My Blog`,
     description: `A blog about frontend development`,
     author: `@myblog`,
+    position: `Student`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
