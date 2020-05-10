@@ -31,7 +31,7 @@ module.exports = {
         gfm: true,
         plugins: [],
       }
-    }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
