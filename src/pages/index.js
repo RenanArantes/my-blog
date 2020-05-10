@@ -9,15 +9,15 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Home</h1>
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
+    <PostItem
+      slug="/about/"
+      background="red"
+      category="Misc"
+      date="10 de Fevereiro de 2020"
+      timeToRead="5"
+      title="Titulo do post"
+      description="Essa e a descricao do que foi escrito no post."
+    />
   </Layout>
 )
 
