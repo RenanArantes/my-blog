@@ -10,33 +10,43 @@ const IndexPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query PostList {
       allMarkdownRemark {
-        nodes {
-          frontmatter {
-            background
-            category
-            description
-            title
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        edges {
+          node {
+            timeToRead
+            frontmatter {
+              background
+              category
+              date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-br")
+              description
+              title
+            }
+            fields {
+              slug
+            }
           }
-          timeToRead
         }
       }
     }
   `)
 
-  const postList = allMarkdownRemark.nodes;
+  const postList = allMarkdownRemark.edges;
 
   return (
     <Layout>
       <SEO title="Home" />
       <h1>Home</h1>
-      {postList.map(({
-        frontmatter: { background, category, date, description, title },
-        timeToRead
-      },
-      ) => (
+      {postList.map(
+        ({
+          node: {
+            frontmatter: { background, category, date, description, title },
+            timeToRead,
+            fields: {
+              slug
+            }
+          }
+        }) => (
         <PostItem
-          slug="/about/"
+          slug={slug}
           key={date}
           background={background}
           category={category}

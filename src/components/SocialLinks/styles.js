@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { darken } from 'polished'
 
 export const SocialLinksWrapper = styled.nav`
   margin: 2rem auto;
