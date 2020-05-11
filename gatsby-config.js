@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `My Blog`,
+    title: `Renanzera Blogsten`,
     description: `A blog about frontend development`,
     author: `@myblog`,
     position: `Student`
@@ -52,6 +52,7 @@ module.exports = {
             }
           },
           'gatsby-remark-lazy-load',
+          'gatsby-remark-prismjs',
         ],
       }
     },
