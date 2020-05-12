@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const PostWrapper = styled.div`
-  margin-left: 300px;
 `
 
 export const PostHeader = styled.header`

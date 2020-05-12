@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const SearchWrapper = styled.div`
-  margin-left: 320px;
   background: #16202c;
   display:flex;
   flex-direction: column;

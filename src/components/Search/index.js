@@ -8,6 +8,8 @@ import {
   Stats,
 } from 'react-instantsearch-dom'
 
+import Hit from './Hit'
+
 import { SearchWrapper } from './styles'
 
 const algolia = {
@@ -22,15 +24,15 @@ const searchClient = algoliaSearch(
 )
 
 const Search = () => (
-  <SearchWrapper>
-    <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
+  <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
+    <SearchWrapper>
       <SearchBox autoFocus translations={{placeholder: 'Pesquisar...'}}/>
       <Stats translations={{stats(nbHits, timeSpentMs) {
         return `${nbHits} resultados encontrados em ${timeSpentMs}ms`
       }}}/>
-      <Hits />
-    </InstantSearch>
-  </SearchWrapper>
+    </SearchWrapper>
+    <Hits hitComponent={Hit}/>
+  </InstantSearch>
 )
 
 export default Search

@@ -16,7 +16,6 @@ export const PostItemWrapper = styled.section`
   display: flex;
   padding: 2rem 3rem;
   width: 100%;
-  margin-left: 300px;
 `
 
 export const PostItemTag = styled.div`
