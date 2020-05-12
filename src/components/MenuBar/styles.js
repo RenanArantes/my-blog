@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { darken } from 'polished'
 
 export const MenuBarWrapper = styled.aside`
   align-items: center;
@@ -32,6 +33,22 @@ export const MenuBarItem = styled.span`
   padding: 1.1rem;
   position: relative;
   width: 3.75rem;
+
+  &.dark{
+    color: #d4d400;
+
+    &:hover {
+      color: #e2e240;
+    }
+  }
+
+  &.light{
+    color: var(--texts);
+
+    &:hover {
+      color: darken(0.5, var(--texts));
+    }
+  }
 
   &:hover {
     color: var(--highlight);

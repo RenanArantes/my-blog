@@ -21,8 +21,8 @@ const SocialLinks = () => {
     {
       label: 'Github',
       url: `https://github.com/${name}${sname}`,
-      color: '#eff3f6',
-      colorHover: darken(0.4, '#eff3f6')
+      color: '#5aa1a9',
+      colorHover: darken(0.1, '#5aa1a9')
     },
     {
       label: 'Twitter',
