@@ -12,7 +12,7 @@ import { SearchOutline as Search } from '@styled-icons/evaicons-outline/SearchOu
 import { SunOutline as Sun } from '@styled-icons/evaicons-outline/SunOutline'
 import { Moon } from '@styled-icons/fa-regular/Moon'
 import { List } from '@styled-icons/evaicons-solid/List'
-import { GridOutLine as Grid } from '@styled-icons/evaicons-outline/GridOutline'
+import { GridOn } from '@styled-icons/material/GridOn'
 import { ArrowUpwardOutline as Up } from '@styled-icons/evaicons-outline/ArrowUpwardOutline'
 
 const MenuBar = () => {
@@ -51,7 +51,7 @@ const MenuBar = () => {
           { isDarkMode ? <Sun /> : <Moon /> }
         </MenuBarItem>
         <MenuBarItem title="Mudar o tema">
-          <List />
+          <GridOn />
         </MenuBarItem>
         <MenuBarItem title="Ir para o topo">
           <Up />
