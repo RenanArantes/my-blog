@@ -17,12 +17,16 @@ import { ArrowUpwardOutline as Up } from '@styled-icons/evaicons-outline/ArrowUp
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
 
   const isDarkMode = theme === 'dark'
+  const isListMode = display === 'list'
 
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__theme)
     window.__onThemeChange = () => setTheme(window.__theme)
+    window.__onDisplayChange = () => setDisplay(window.__display)
   },[])
 
   return (
@@ -50,8 +54,14 @@ const MenuBar = () => {
         >
           { isDarkMode ? <Sun /> : <Moon /> }
         </MenuBarItem>
-        <MenuBarItem title="Mudar o tema">
-          <GridOn />
+        <MenuBarItem
+          title="Mudar o tema"
+          onClick={() => {
+            window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
+          }}
+          className={display}
+        >
+          { isListMode ? <GridOn /> : <List />}
         </MenuBarItem>
         <MenuBarItem title="Ir para o topo">
           <Up />
