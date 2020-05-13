@@ -25,6 +25,10 @@ const MenuLinks = () => {
         {links.map((link, index) => (
           <MenuLinksItem key={index}>
             <MenuLinksLink
+              cover
+              direction="left"
+              bg="#16202c"
+              duration={0.6}
               to={link.url}
               activeClassName="active"
             >

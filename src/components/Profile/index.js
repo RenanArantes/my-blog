@@ -30,7 +30,13 @@ const Profile = () => {
 
   return (
     <ProfileWrapper>
-      <ProfileLink to="/about">
+      <ProfileLink
+        cover
+        direction="left"
+        bg="#16202c"
+        duration={0.6}
+        to="/"
+      >
         <Avatar />
         <ProfileAuthor>{title}
           <ProfilePosition>{position}</ProfilePosition>
