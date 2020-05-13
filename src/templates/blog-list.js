@@ -17,8 +17,8 @@ const BlogList = props => {
     <Layout>
       <SEO
         title="Home"
-        description={post.frontmatter.description}
-        image={post.frontmatter.image}
+        description={postList.frontmatter.description}
+        image={postList.frontmatter.image}
       />
       <ListWrapper>
         {postList.map(

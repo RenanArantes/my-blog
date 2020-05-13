@@ -8,8 +8,7 @@ const SeachPage = () => (
   <Layout>
     <SEO
       title="Seach"
-      description={post.frontmatter.description}
-      image={post.frontmatter.image}
+      description="Pagina de pesquisa"
     />
     <Search />
   </Layout>
