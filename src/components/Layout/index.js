@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { TransitionPortal } from "gatsby-plugin-transition-link"
 
 import GlobalStyles from '../../styles/global'
 
@@ -12,9 +13,13 @@ const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
       <GlobalStyles />
-      <Sidebar />
+      <TransitionPortal level="top">
+        <Sidebar />
+      </TransitionPortal>
       <LayoutMain>{children}</LayoutMain>
-      <MenuBar />
+      <TransitionPortal level="top">
+        <MenuBar />
+      </TransitionPortal>
     </LayoutWrapper>
   )
 }

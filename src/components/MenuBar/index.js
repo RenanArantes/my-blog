@@ -1,5 +1,7 @@
 import React, { useState, useEffect} from 'react'
 
+import getThemeColor from '../../utils/getThemeColor'
+
 import {
   MenuBarWrapper,
   MenuBarLink,
@@ -35,7 +37,7 @@ const MenuBar = () => {
         <MenuBarLink
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor}
           duration={0.6}
           to="/"
           title="Voltar para Home"
@@ -47,7 +49,7 @@ const MenuBar = () => {
         <MenuBarLink
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor}
           duration={0.6}
           to="/search/"
           title="Pesquisar"
