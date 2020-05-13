@@ -15,7 +15,11 @@ const BlogList = props => {
 
   return(
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title="Home"
+        description={post.frontmatter.description}
+        image={post.frontmatter.image}
+      />
       <ListWrapper>
         {postList.map(
           ({
@@ -71,6 +75,7 @@ export const query = graphql`
             date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-br")
             description
             title
+            image
           }
           fields {
             slug

@@ -6,7 +6,11 @@ import SEO from "../components/seo"
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="About"/>
+    <SEO
+      title="About"
+      description={post.frontmatter.description}
+      image={post.frontmatter.image}
+    />
     <h1>About Page</h1>
     <Link to="/about" activeStyle={{color:'red'}}>About</Link>
     <Link to="/" >Home</Link>
