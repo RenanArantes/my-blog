@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import media from "styled-media-query"
 
 export const SearchWrapper = styled.div`
   background: var(--background);
   display:flex;
   flex-direction: column;
-  width: 75%;
+  width: 100%;
   transition: opacity 0.4s;
 
   .ais-InstantSearch__root {
@@ -17,10 +18,18 @@ export const SearchWrapper = styled.div`
   .ais-SearchBox,
   .ais-Stats {
     padding: 0.5rem 3rem;
+
+    ${media.lessThan("medium")`
+      padding: 0.5rem 1rem;
+    `}
   }
 
   .ais-SearchBox {
     padding-top: 6rem;
+
+    ${media.lessThan("medium")`
+      padding-top: 1rem;
+    `}
   }
 
   .ais-Stats {
@@ -46,7 +55,7 @@ export const SearchWrapper = styled.div`
   .ais-SearchBox-input {
     background: none;
     border: none;
-    border-bottom: 1px solid var(--borders);
+    border-bottom: 6px solid var(--borders);
     color: var(--texts);
     display: flex;
     font-size: 1.6rem;
