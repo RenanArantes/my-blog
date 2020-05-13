@@ -7,7 +7,8 @@ module.exports = {
     title: `Renanzera Blogsten`,
     description: `A blog about frontend development`,
     author: `@myblog`,
-    position: `Student`
+    position: `Student`,
+    siteUrl: 'https://johndoe.com.br'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
