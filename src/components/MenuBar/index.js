@@ -37,7 +37,7 @@ const MenuBar = () => {
         <MenuBarLink
           cover
           direction="right"
-          bg={getThemeColor}
+          bg={getThemeColor()}
           duration={0.6}
           to="/"
           title="Voltar para Home"
@@ -49,7 +49,7 @@ const MenuBar = () => {
         <MenuBarLink
           cover
           direction="right"
-          bg={getThemeColor}
+          bg={getThemeColor()}
           duration={0.6}
           to="/search/"
           title="Pesquisar"
@@ -79,7 +79,11 @@ const MenuBar = () => {
         >
           { isListMode ? <GridOn /> : <List />}
         </MenuBarItem>
-        <MenuBarItem title="Ir para o topo">
+        <MenuBarItem
+        title="Ir para o topo"
+        onClick={() => {
+          window.scroll({ top: 0, behavior: 'smooth' })
+        }}>
           <Up />
         </MenuBarItem>
       </MenuBarGroup>
