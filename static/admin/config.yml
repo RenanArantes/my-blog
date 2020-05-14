@@ -2,7 +2,7 @@ backend:
   name: github
   repo: renanarantes/my-blog
   branch: master
-  site_domain: https://renanzerablogsten.netlify.app/
+  site_domain: renanzerablogsten.netlify.app
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
@@ -24,4 +24,22 @@ collections:
           format: "YYYY-MM-DD hh:mm:ss",
         }
       - { label: "image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Option1", "Option2", "Option3", "Option4","Option5"]
+        }
+      - {
+        label: "Background",
+        name: "background",
+        widget: "select",
+        options: [
+          { label: 'Red', value: "#B31917" },
+          { label: 'Blue', value: '#2DA0C3' },
+          { label: 'Yellow', value: '#D6BA32' },
+          { label: 'Orange', value: '#EB7728' },
+          { label: 'Purple', value: '#7D669E' },
+        ]
+        }
       - { label: "Body", name: "body", widget: "markdown" }
